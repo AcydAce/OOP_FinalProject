@@ -6,16 +6,20 @@ public enum Product {               //enum type is a data type that
     private int id;
     private int price;
 
-    Product(int id, int price){     //
+    Product(int id, int price){
         this.id = id;               // The Constructor
-        this.price = price          //
+        this.price = price;
     }
 
-    public int getId(){             //
-        return this.id;             //
-    }                               //
-                                    // Methods
-    public int getPrice(){          //
-        return this.price           //
-    }                               //
+    public int getId(){
+        return this.id;
+    }
+
+    public int getPrice(){          // Methods
+        return this.price;
+    }
+
+    public static Product valueOf(int productSelected){
+        for(Product product: Product.values(this.selectedProduct));
+    }
 }

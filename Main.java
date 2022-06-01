@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        VendingMachine vendingMachine = null;
+        VendingMachine vendingMachine = new InteractVendingMachine();
 
         vendingMachine.displayProducts();
 
@@ -18,7 +18,7 @@ public class Main {
 
         String userEnteredCoins = scanner.nextLine();
 
-        int[] enteredCoins = {}; //T0D0
+        int[] enteredCoins = Coin.parseCoins(userEnteredCoins);
 
         vendingMachine.enterCoins(enteredCoins);
         vendingMachine.displayChangeMessage();
